@@ -39,5 +39,9 @@ Going back in Time
 6. git revert HEAD - reverts the most recent commit
 
 # Interacting with remote repositories; Github
-
+First Practice
+1. set a ssh
+2. add the public ssh to the remote repository
+3. clone that repository to the local 
+4. git push -u origin master --to let the local file push to the remote
 
