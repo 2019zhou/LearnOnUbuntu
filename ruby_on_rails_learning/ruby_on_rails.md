@@ -140,8 +140,6 @@ used to express natural consecutive sequences
 - Way2. adjust_colors background:"yella"
 - Way3. adjust_colors :bakckground => "magenta"
 
-
-
 ## Block and Hash Confusion
 \# Let's say you have a Hash
 a_hash = {:one => "one"}

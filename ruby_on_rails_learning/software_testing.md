@@ -22,3 +22,37 @@
 - 是指程序执行的流转过程
 - Vertex: Statement;Block;Function;Module
 - Edge: Flow;Jump;Call
+
+## 如何用现有的工具为java程序生成控制流图
+- Soot
+- https://sable.github.io/soot
+
+# 数据流测试Data Flow Coverage
+- try to ensure that values are computed and used correctly (关于点上的数据是否计算准确)
+- Definition(def):常见的有赋值，初始化
+- Use: a location where a variable is accessed比如说分支，判断，赋值的右边，循环
+
+## sets of def & use
+- def(n) or def(e)
+The set of variables that are defined by node n or edge e
+- use(n) or use(e)
+The set of variables that are used by node n or edge e
+
+## Du Pair
+a pair of locations(li, lj)such that a variable v is defined at li and used at lj
+
+## Def-clear
+从li -> lj之间的定义没有被任意的其他节点定义过
+### reach
+If there is a def-clear path from li to lj with respect to v, the def of v at li reaches the use at lj
+
+## Du Path
+- du-path - a simple subpath that is def-clear with respect to v from a def of v to a use of v
+- du(ni, nj, v) the set of du-paths from ni to nj
+- du(ni, v) the set of du-paths that start at ni
+
+## 三种覆盖准则
+- (ADC) All-defs coverage -所有定义过的地方都覆盖过一次
+- (AUC) All-uses coverage -关于变量v所有引用，使用的地方都覆盖过一次
+- *注意,有引用，前面一定有定义
+- (ADUPC) All-du-paths coverage - For each set S = du(ni, nj, v), TR contains every path d in S
