@@ -1,2 +1,4 @@
 # LearnOnUbuntu
-Ruby_On_Rails; Software_testing;
+1. Ruby_On_Rails
+2. Software_testing
+3. other problems encounter on the Ubuntu system
